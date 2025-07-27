@@ -1,474 +1,250 @@
-<!DOCTYPE HTML>
-<!--
-	Photon by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>AmirHossein Mohammadi</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="icon" href="https://img.icons8.com/ios/50/null/artificial-intelligence.png"  />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amirhossein Mohammadi - Resume</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6; /* A light gray background */
+        }
+        .section-title {
+            border-bottom: 2px solid #3b82f6; /* Blue accent color */
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            font-size: 1.25rem;
+            color: #1f2937; /* Darker gray for titles */
+        }
+        .card {
+            background-color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+        .tag {
+            background-color: #e0e7ff; /* Light blue for tags */
+            color: #3730a3; /* Darker blue for tag text */
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
 
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+    <div class="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
+        <!-- Main Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
 
-		<!-- Header -->
-			<section id="header">
-				<div class="inner">
-<!--					<span class="icon solid major fa-cloud"></span>-->
-					<a>
-						<img src="https://img.icons8.com/ios/50/null/artificial-intelligence.png"/>
-						<h1>Hi, I'm <strong>Amirhossein Mohammadi</strong>,<br />
-						here's my webpage:)</h1>
-					<p>MSc student in Artficial Intelligence<br />
-					BigData engineer</p>
-					<ul class="actions special">
-						<li><a href="#one" class="button scrolly">Discover</a></li>
-					</ul>
-				</div>
-			</section>
+            <!-- Left Column -->
+            <div class="lg:col-span-1 space-y-8">
+                <!-- Profile Card -->
+                <div class="card p-6 text-center">
+                    <!-- Add your image URL in the src attribute below -->
+                    <img src="images/Profile.jpg" alt="Amirhossein Mohammadi" class="w-64 h-64 rounded-full mx-auto mb-4 border-4 border-white shadow-lg">
+                    <h1 class="text-3xl font-bold text-gray-900">Amirhossein Mohammadi</h1>
+                    <p class="text-blue-600 font-medium mt-2">Ph.D. Candidate & NLP/ML Specialist</p>
+                </div>
 
-		<!-- One -->
-			<section id="one" class="main style1">
-				<div class="container">
-					<div class="row gtr-150">
-						<div class="col-6 col-12-medium">
-							<header class="major">
-								<h2>Lorem ipsum dolor adipiscing<br />
-								<h2>Lorem ipsum dolor adipiscing<br />
-								amet dolor consequat</h2>
-							</header>
-							<p>Adipiscing a commodo ante nunc accumsan et interdum mi ante adipiscing. A nunc lobortis non nisl amet vis sed volutpat aclacus nascetur ac non. Lorem curae et ante amet sapien sed tempus adipiscing id accumsan.</p>
-							<a href="https://github.com/the-amirhosein/portfolio/raw/main/CV.pdf" target="_tab" class="button">my CV</a>
-						</div>
-						<div class="col-6 col-12-medium imp-medium">
-							<span class="image fit"><img src="images/pic01.jpg" alt="" /></span>
-						</div>
-					</div>
-				</div>
-			</section>
+                <!-- Contact Info Card -->
+                <div class="card p-6">
+                     <h2 class="section-title">Contact</h2>
+                    <ul class="space-y-4">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt w-6 text-blue-500"></i>
+                            <span>Leiden, Netherlands</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope w-6 text-blue-500"></i>
+                            <a href="mailto:a.mohammadi@uu.nl" class="hover:text-blue-600">a.mohammadi@uu.nl</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fab fa-linkedin w-6 text-blue-500"></i>
+                            <a href="https://www.linkedin.com/in/amirhoseinmhmd/" target="_blank" class="hover:text-blue-600">Amirhossein Mohammadi</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fab fa-github w-6 text-blue-500"></i>
+                            <a href="https://github.com/the-amirhosein" target="_blank" class="hover:text-blue-600">the-amirhosein</a>
+                        </li>
+                    </ul>
+                </div>
 
-		<!-- Two -->
-			<section id="two" class="main style2">
-				<div class="container">
-					<div class="row gtr-150">
-						<div class="col-6 col-12-medium">
-							<ul class="major-icons">
-								<li><span class="icon solid style1 major fa-code"></span></li>
-								<li><span class="icon solid style2 major fa-bolt"></span></li>
-								<li><span class="icon solid style3 major fa-camera-retro"></span></li>
-								<li><span class="icon solid style4 major fa-cog"></span></li>
-								<li><span class="icon solid style5 major fa-desktop"></span></li>
-								<li><span class="icon solid style6 major fa-calendar"></span></li>
-							</ul>
-						</div>
-						<div class="col-6 col-12-medium">
-							<header class="major">
-								<h2>Lorem ipsum dolor adipiscing<br />
-								amet dolor consequat</h2>
-							</header>
-							<p>Adipiscing a commodo ante nunc accumsan interdum mi ante adipiscing. A nunc lobortis non nisl amet vis volutpat aclacus nascetur ac non. Lorem curae eu ante amet sapien in tempus ac. Adipiscing id accumsan adipiscing ipsum.</p>
-							<p>Blandit faucibus proin. Ac aliquam integer adipiscing enim non praesent vis commodo nunc phasellus cubilia ac risus accumsan. Accumsan blandit. Lobortis phasellus non lobortis dit varius mi varius accumsan lobortis. Blandit ante aliquam lacinia lorem lobortis semper morbi col faucibus vitae integer placerat accumsan orci eu mi odio tempus adipiscing adipiscing adipiscing curae consequat feugiat etiam dolore.</p>
-							<p>Adipiscing a commodo ante nunc accumsan interdum mi ante adipiscing. A nunc lobortis non nisl amet vis volutpat aclacus nascetur ac non. Lorem curae eu ante amet sapien in tempus ac. Adipiscing id accumsan adipiscing ipsum.</p>
-						</div>
-					</div>
-				</div>
-			</section>
+                <!-- Skills Card -->
+                <div class="card p-6">
+                    <h2 class="section-title">Skills</h2>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tag">Java</span>
+                        <span class="tag">Python3</span>
+                        <span class="tag">C++</span>
+                        <span class="tag">Bash script</span>
+                        <span class="tag">SQL</span>
+                        <span class="tag">Cassandra</span>
+                        <span class="tag">Spring-Boot 3</span>
+                        <span class="tag">Docker Swarm</span>
+                        <span class="tag">Elasticsearch</span>
+                        <span class="tag">Logstash</span>
+                        <span class="tag">PostgreSQL</span>
+                        <span class="tag">gRPC</span>
+                        <span class="tag">Jenkins</span>
+                        <span class="tag">Rest-API</span>
+                        <span class="tag">Django</span>
+                        <span class="tag">Flask</span>
+                        <span class="tag">Pytorch</span>
+                        <span class="tag">Pandas</span>
+                        <span class="tag">Numpy</span>
+                        <span class="tag">Open-CV</span>
+                        <span class="tag">Docker</span>
+                        <span class="tag">Kafka</span>
+                        <span class="tag">Redis</span>
+                    </div>
+                </div>
 
-		<!-- Three -->
-			<section id="three" class="main style1 special">
-				<div class="container">
-					<header class="major">
-						<h2>Adipiscing amet consequat</h2>
-					</header>
-					<p>Ante nunc accumsan et aclacus nascetur ac ante amet sapien sed.</p>
-					<div class="row gtr-150">
-						<div class="col-4 col-12-medium">
-							<span class="image fit"><img src="images/pic02.jpg" alt="" /></span>
-							<h3>Magna feugiat lorem</h3>
-							<p>Adipiscing a commodo ante nunc magna lorem et interdum mi ante nunc lobortis non amet vis sed volutpat et nascetur.</p>
-							<ul class="actions special">
-								<li><a href="#" class="button">More</a></li>
-							</ul>
-						</div>
-						<div class="col-4 col-12-medium">
-							<span class="image fit"><img src="images/pic03.jpg" alt="" /></span>
-							<h3>Magna feugiat lorem</h3>
-							<p>Adipiscing a commodo ante nunc magna lorem et interdum mi ante nunc lobortis non amet vis sed volutpat et nascetur.</p>
-							<ul class="actions special">
-								<li><a href="#" class="button">More</a></li>
-							</ul>
-						</div>
-						<div class="col-4 col-12-medium">
-							<span class="image fit"><img src="images/pic04.jpg" alt="" /></span>
-							<h3>Magna feugiat lorem</h3>
-							<p>Adipiscing a commodo ante nunc magna lorem et interdum mi ante nunc lobortis non amet vis sed volutpat et nascetur.</p>
-							<ul class="actions special">
-								<li><a href="#" class="button">More</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</section>
+                 <!-- Soft Skills Card -->
+                <div class="card p-6">
+                    <h2 class="section-title">Soft Skills</h2>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tag">Teamworking</span>
+                        <span class="tag">Problem-solving</span>
+                        <span class="tag">Creativity</span>
+                        <span class="tag">Adaptability</span>
+                    </div>
+                </div>
 
-		<!-- Four -->
-<!--			<section id="four" class="main style2 special">-->
-<!--				<div class="container">-->
-<!--					<header class="major">-->
-<!--						<h2>Ipsum feugiat consequat?</h2>-->
-<!--					</header>-->
-<!--					<p>Sed lacus nascetur ac ante amet sapien.</p>-->
-<!--					<ul class="actions special">-->
-<!--						<li><a href="#" class="button wide primary">Sign Up</a></li>-->
-<!--						<li><a href="#" class="button wide">Learn More</a></li>-->
-<!--					</ul>-->
-<!--				</div>-->
-<!--			</section>-->
+                <!-- Languages Card -->
+                <div class="card p-6">
+                    <h2 class="section-title">Languages</h2>
+                    <ul class="space-y-2">
+                        <li><strong>English:</strong> proficient</li>
+                        <li><strong>Persian:</strong> Native</li>
+                    </ul>
+                </div>
+            </div>
 
-		<!-- Five -->
-		<!--
-			<section id="five" class="main style1">
-				<div class="container">
-					<header class="major special">
-						<h2>Elements</h2>
-					</header>
+            <!-- Right Column -->
+            <div class="lg:col-span-2 space-y-8">
+                <!-- About Me Card -->
+                <div class="card p-6">
+                    <h2 class="section-title">About Me</h2>
+                    <p class="text-lg leading-relaxed">
+                        A dedicated Ph.D. candidate at Utrecht University with a strong background in Artificial Intelligence and Natural Language Processing. My research focuses on the capabilities of Large Language Models. I have hands-on experience as an NLP/ML Specialist and Big Data Engineer, developing scalable systems, search engines, and data pipelines. I am passionate about leveraging technology to solve complex problems and contribute to meaningful projects.
+                    </p>
+                </div>
 
-					<section>
-						<h4>Text</h4>
-						<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-						This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-						This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-						<hr />
-						<header>
-							<h4>Heading with a Subtitle</h4>
-							<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
-						</header>
-						<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-						<header>
-							<h5>Heading with a Subtitle</h5>
-							<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
-						</header>
-						<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-						<hr />
-						<h2>Heading Level 2</h2>
-						<h3>Heading Level 3</h3>
-						<h4>Heading Level 4</h4>
-						<h5>Heading Level 5</h5>
-						<h6>Heading Level 6</h6>
-						<hr />
-						<h5>Blockquote</h5>
-						<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-						<h5>Preformatted</h5>
-						<pre><code>i = 0;
+                <!-- Education Card -->
+                <div class="card p-6">
+                    <h2 class="section-title">Education</h2>
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="text-xl font-semibold">Ph.D. Candidate</h3>
+                            <p class="text-md text-blue-600">Utrecht University (UU)</p>
+                            <p class="text-sm text-gray-600">Sep 2021 - Present</p>
+                            <p class="mt-2">Investigation into the capability of LLMs in Learning Impossible Languages.</p>
+                        </div>
+                        <hr>
+                        <div>
+                            <h3 class="text-xl font-semibold">M.Sc. Soft Computing and Artificial Intelligence</h3>
+                            <p class="text-md text-blue-600">Allameh Tabataba'i University (ATU)</p>
+                             <p class="text-sm text-gray-600">Sep 2016 - Aug 2021</p>
+                            <p class="mt-2">Thesis: Diagnosis of depression by detecting linguistic markers of depression using Machine Learning methods.</p>
+                        </div>
+                         <hr>
+                        <div>
+                            <h3 class="text-xl font-semibold">B.Sc. Computer Science</h3>
+                            <p class="text-md text-blue-600">Kharazmi University (KHU)</p>
+                             <p class="text-sm text-gray-600">Sep 2012 - Jun 2016</p>
+                            <p class="mt-2">B.Sc. Project: Comprehensive comparison of Swarm intelligence algorithms over Traveling Salesman Problem.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Publication Card -->
+                <div class="card p-6">
+                    <h2 class="section-title">Publication</h2>
+                    <div>
+                        <h3 class="font-semibold">ACO-tagger: A Novel Method for Part-of-Speech Tagging using Ant Colony Optimization</h3>
+                        <p class="text-sm text-gray-600">
+                            <a href="https://arxiv.org/pdf/2303.16760" class="text-sm text-gray-600 hover:underline">
+                                arXiv preprint arXiv:2303.16760 (March 2023)
+                            </a>
+                        </p>
+                        <p class="mt-1">Mohammadi, A., Hajiaghajani, S., Bahrani, M.</p>
+                    </div>
+                </div>
 
-while (!deck.isInOrder()) {
-print 'Iteration ' + i;
-deck.shuffle();
-i++;
-}
+                                <!-- Experience Card -->
+                <div class="card p-6">
+                    <h2 class="section-title">Work Experience</h2>
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between items-baseline">
+                                <h3 class="text-xl font-semibold">NLP/ML Specialist</h3>
+                                <p class="text-sm text-gray-600">June 2022 - May 2025</p>
+                            </div>
+                            <p class="text-md text-blue-600">MCI</p>
+                            <p class="mt-2">Developed systems using Transformers, BERT, and GPT-2 for information retrieval and generative models. Contributed to a search engine for multi-type data (images, documents, voice).</p>
+                        </div>
+                        <hr>
+                        <div>
+                            <div class="flex justify-between items-baseline">
+                                <h3 class="text-xl font-semibold">Big Data Engineer</h3>
+                                <p class="text-sm text-gray-600">Mar 2021 - May 2025</p>
+                            </div>
+                            <p class="text-md text-blue-600">Mahsan co.</p>
+                            <p class="mt-2">Developed high-throughput data collectors and ETL processes with Java, Python, and Cassandra. Designed and developed data pipelines using ActiveMQ and Kafka. Deployed and maintained Cassandra clusters and worked with cloud object storages like MinIO and Ceph.</p>
+                        </div>
+                        <hr>
+                        <div>
+                            <div class="flex justify-between items-baseline">
+                                <h3 class="text-xl font-semibold">MicroService Back-end Developer</h3>
+                                <p class="text-sm text-gray-600">Jul 2019 - Mar 2021</p>
+                            </div>
+                            <p class="text-md text-blue-600">Tourism IT co.</p>
+                            <p class="mt-2">Designed and developed digital banking services for TourismBank using a microservice architecture. Created system gateways with REST API and gRPC for internal communication.</p>
+                        </div>
+                         <hr>
+                        <div>
+                            <div class="flex justify-between items-baseline">
+                                <h3 class="text-xl font-semibold">Java-SE Developer</h3>
+                                <p class="text-sm text-gray-600">Oct 2018 - Mar 2020</p>
+                            </div>
+                            <p class="text-md text-blue-600">TSIN co.</p>
+                            <p class="mt-2">Designed and developed an ETL tool to extract, transform, and load data from various SQL databases and files into an Oracle data warehouse.</p>
+                        </div>
+                    </div>
+                </div>
 
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-					</section>
+                <!-- Projects Card -->
+                <div class="card p-6">
+                    <h2 class="section-title">Projects</h2>
+                    <div class="space-y-4">
+                        <div>
+                            <h3 class="font-semibold">Depression Diagnosis via Linguistic Markers (Master's Thesis)</h3>
+                            <p>Utilized BERT to classify text for depression, achieving 85.5% accuracy and showcasing the potential of language-based mental health assessment.</p>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold">Swarm Intelligence Algorithm Comparison (Bachelor's Project)</h3>
+                            <p>Implemented and compared Ant Colony Optimization, Artificial Bee Colony, Firefly, and Red Deer algorithms on Traveling Salesman Problem datasets.</p>
+                        </div>
+                         <div>
+                            <h3 class="font-semibold">Various Implementations</h3>
+                            <p>Developed projects including intent classification with BERT, CIFAR-10 classification with CNNs, graph algorithms, a cryptography tool using Hafez poems, P2P data transfer, and more.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-					<section>
-						<h4>Lists</h4>
-						<div class="row">
-							<div class="col-6 col-12-medium">
-								<h5>Unordered</h5>
-								<ul>
-									<li>Dolor pulvinar etiam.</li>
-									<li>Sagittis adipiscing.</li>
-									<li>Felis enim feugiat.</li>
-								</ul>
-								<h5>Alternate</h5>
-								<ul class="alt">
-									<li>Dolor pulvinar etiam.</li>
-									<li>Sagittis adipiscing.</li>
-									<li>Felis enim feugiat.</li>
-								</ul>
-							</div>
-							<div class="col-6 col-12-medium">
-								<h5>Ordered</h5>
-								<ol>
-									<li>Dolor pulvinar etiam.</li>
-									<li>Etiam vel felis viverra.</li>
-									<li>Felis enim feugiat.</li>
-									<li>Dolor pulvinar etiam.</li>
-									<li>Etiam vel felis lorem.</li>
-									<li>Felis enim et feugiat.</li>
-								</ol>
-								<h5>Icons</h5>
-								<ul class="icons">
-									<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-								</ul>
-							</div>
-						</div>
-						<h5>Actions</h5>
-						<div class="row">
-							<div class="col-6 col-12-medium">
-								<ul class="actions">
-									<li><a href="#" class="button primary">Default</a></li>
-									<li><a href="#" class="button">Default</a></li>
-								</ul>
-								<ul class="actions small">
-									<li><a href="#" class="button primary small">Small</a></li>
-									<li><a href="#" class="button small">Small</a></li>
-								</ul>
-								<ul class="actions stacked">
-									<li><a href="#" class="button primary">Default</a></li>
-									<li><a href="#" class="button">Default</a></li>
-								</ul>
-								<ul class="actions stacked">
-									<li><a href="#" class="button primary small">Small</a></li>
-									<li><a href="#" class="button small">Small</a></li>
-								</ul>
-							</div>
-							<div class="col-6 col-12-medium">
-								<ul class="actions stacked">
-									<li><a href="#" class="button primary fit">Default</a></li>
-									<li><a href="#" class="button fit">Default</a></li>
-								</ul>
-								<ul class="actions stacked">
-									<li><a href="#" class="button primary small fit">Small</a></li>
-									<li><a href="#" class="button small fit">Small</a></li>
-								</ul>
-							</div>
-						</div>
-					</section>
-
-					<section>
-						<h4>Table</h4>
-						<h5>Default</h5>
-						<div class="table-wrapper">
-							<table>
-								<thead>
-									<tr>
-										<th>Name</th>
-										<th>Description</th>
-										<th>Price</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Item One</td>
-										<td>Ante turpis integer aliquet porttitor.</td>
-										<td>29.99</td>
-									</tr>
-									<tr>
-										<td>Item Two</td>
-										<td>Vis ac commodo adipiscing arcu aliquet.</td>
-										<td>19.99</td>
-									</tr>
-									<tr>
-										<td>Item Three</td>
-										<td> Morbi faucibus arcu accumsan lorem.</td>
-										<td>29.99</td>
-									</tr>
-									<tr>
-										<td>Item Four</td>
-										<td>Vitae integer tempus condimentum.</td>
-										<td>19.99</td>
-									</tr>
-									<tr>
-										<td>Item Five</td>
-										<td>Ante turpis integer aliquet porttitor.</td>
-										<td>29.99</td>
-									</tr>
-								</tbody>
-								<tfoot>
-									<tr>
-										<td colspan="2"></td>
-										<td>100.00</td>
-									</tr>
-								</tfoot>
-							</table>
-						</div>
-
-						<h5>Alternate</h5>
-						<div class="table-wrapper">
-							<table class="alt">
-								<thead>
-									<tr>
-										<th>Name</th>
-										<th>Description</th>
-										<th>Price</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Item One</td>
-										<td>Ante turpis integer aliquet porttitor.</td>
-										<td>29.99</td>
-									</tr>
-									<tr>
-										<td>Item Two</td>
-										<td>Vis ac commodo adipiscing arcu aliquet.</td>
-										<td>19.99</td>
-									</tr>
-									<tr>
-										<td>Item Three</td>
-										<td> Morbi faucibus arcu accumsan lorem.</td>
-										<td>29.99</td>
-									</tr>
-									<tr>
-										<td>Item Four</td>
-										<td>Vitae integer tempus condimentum.</td>
-										<td>19.99</td>
-									</tr>
-									<tr>
-										<td>Item Five</td>
-										<td>Ante turpis integer aliquet porttitor.</td>
-										<td>29.99</td>
-									</tr>
-								</tbody>
-								<tfoot>
-									<tr>
-										<td colspan="2"></td>
-										<td>100.00</td>
-									</tr>
-								</tfoot>
-							</table>
-						</div>
-					</section>
-
-					<section>
-						<h4>Buttons</h4>
-						<ul class="actions">
-							<li><a href="#" class="button primary">Primary</a></li>
-							<li><a href="#" class="button">Default</a></li>
-						</ul>
-						<ul class="actions">
-							<li><a href="#" class="button large">Large</a></li>
-							<li><a href="#" class="button">Default</a></li>
-							<li><a href="#" class="button small">Small</a></li>
-						</ul>
-						<ul class="actions fit">
-							<li><a href="#" class="button fit">Fit</a></li>
-							<li><a href="#" class="button primary fit">Fit</a></li>
-							<li><a href="#" class="button fit">Fit</a></li>
-						</ul>
-						<ul class="actions fit small">
-							<li><a href="#" class="button primary fit small">Fit + Small</a></li>
-							<li><a href="#" class="button fit small">Fit + Small</a></li>
-							<li><a href="#" class="button primary fit small">Fit + Small</a></li>
-						</ul>
-						<ul class="actions">
-							<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
-							<li><a href="#" class="button icon solid fa-download">Icon</a></li>
-						</ul>
-						<ul class="actions">
-							<li><span class="button primary disabled">Disabled</span></li>
-							<li><span class="button disabled">Disabled</span></li>
-						</ul>
-					</section>
-
-					<section>
-						<h4>Form</h4>
-						<form method="post" action="#">
-							<div class="row gtr-uniform gtr-50">
-								<div class="col-6 col-12-xsmall">
-									<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
-								</div>
-								<div class="col-6 col-12-xsmall">
-									<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
-								</div>
-								<div class="col-12">
-									<select name="demo-category" id="demo-category">
-										<option value="">- Category -</option>
-										<option value="1">Manufacturing</option>
-										<option value="1">Shipping</option>
-										<option value="1">Administration</option>
-										<option value="1">Human Resources</option>
-									</select>
-								</div>
-								<div class="col-4 col-12-small">
-									<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-									<label for="demo-priority-low">Low</label>
-								</div>
-								<div class="col-4 col-12-small">
-									<input type="radio" id="demo-priority-normal" name="demo-priority">
-									<label for="demo-priority-normal">Normal</label>
-								</div>
-								<div class="col-4 col-12-small">
-									<input type="radio" id="demo-priority-high" name="demo-priority">
-									<label for="demo-priority-high">High</label>
-								</div>
-								<div class="col-6 col-12-small">
-									<input type="checkbox" id="demo-copy" name="demo-copy">
-									<label for="demo-copy">Email me a copy</label>
-								</div>
-								<div class="col-6 col-12-small">
-									<input type="checkbox" id="demo-human" name="demo-human" checked>
-									<label for="demo-human">Not a robot</label>
-								</div>
-								<div class="col-12">
-									<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-								</div>
-								<div class="col-12">
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Reset" /></li>
-									</ul>
-								</div>
-							</div>
-						</form>
-					</section>
-
-					<section>
-						<h4>Image</h4>
-						<h5>Fit</h5>
-						<div class="box alt">
-							<div class="row gtr-uniform gtr-50">
-								<div class="col-12"><span class="image fit"><img src="images/pic06.jpg" alt="" /></span></div>
-								<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-								<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-								<div class="col-4"><span class="image fit"><img src="images/pic04.jpg" alt="" /></span></div>
-								<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-								<div class="col-4"><span class="image fit"><img src="images/pic04.jpg" alt="" /></span></div>
-								<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-								<div class="col-4"><span class="image fit"><img src="images/pic04.jpg" alt="" /></span></div>
-								<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-								<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-							</div>
-						</div>
-						<h5>Left &amp; Right</h5>
-						<p><span class="image left"><img src="images/pic05.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-						<p><span class="image right"><img src="images/pic05.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-					</section>
-
-				</div>
-			</section>
-		-->
-
-		<!-- Footer -->
-			<section id="footer">
-				<ul class="icons">
-<!--					<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>-->
-<!--					<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>-->
-<!--					<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>-->
-					<li><a href="https://www.linkedin.com/in/amirhoseinmhmd/" class="icon brands alt fa-linkedin"><span class="label">GitHub</span></a></li>
-					<li><a href="https://github.com/the-amirhosein" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-					<li><a href="mailto:98.amirhosein@gmail.com" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
-				</ul>
-<!--				<ul class="copyright">-->
-<!--					<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>-->
-<!--				</ul>-->
-			</section>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+</body>
 </html>
