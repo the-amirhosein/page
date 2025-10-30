@@ -212,15 +212,12 @@
             </div>
             <!-- Publication Card -->
             <div id="publication" class="card p-6">
-                <h2 class="section-title">Publication</h2>
-                <div>
-                    <h3 class="font-semibold">ACO-tagger: A Novel Method for Part-of-Speech Tagging using Ant Colony Optimization</h3>
-                    <p class="text-sm text-gray-600">
-                        <a href="https://arxiv.org/pdf/2303.16760" class="text-sm text-gray-600 hover:underline" target="_blank" rel="noopener noreferrer">
-                            arXiv preprint arXiv:2303.16760 (March 2023)
-                        </a>
-                    </p>
-                    <p class="mt-1">Mohammadi, A., Hajiaghajani, S., Bahrani, M.</p>
+                <h2 class="section-title">Publications</h2>
+                <div id="publications-list" class="space-y-6">
+                    <div class="text-center text-gray-500 py-4">
+                        <i class="fas fa-spinner fa-spin text-2xl"></i>
+                        <p class="mt-2">Loading publications...</p>
+                    </div>
                 </div>
             </div>
 
@@ -321,6 +318,132 @@
             }
         });
     });
+
+    // BibTeX Parser for Publications
+    class BibtexParser {
+        parse(bibtexString) {
+            const entries = [];
+            const entryRegex = /@(\w+)\s*\{\s*([^,]+)\s*,\s*([\s\S]*?)\n\}/gm;
+            let match;
+
+            while ((match = entryRegex.exec(bibtexString)) !== null) {
+                const type = match[1].toLowerCase();
+                const key = match[2].trim();
+                const fieldsString = match[3];
+
+                const fields = this.parseFields(fieldsString);
+
+                entries.push({
+                    type,
+                    key,
+                    ...fields
+                });
+            }
+
+            return entries;
+        }
+
+        parseFields(fieldsString) {
+            const fields = {};
+            const fieldRegex = /(\w+)\s*=\s*\{([^}]*)\}|(\w+)\s*=\s*"([^"]*)"/g;
+            let match;
+
+            while ((match = fieldRegex.exec(fieldsString)) !== null) {
+                const fieldName = (match[1] || match[3]).toLowerCase();
+                const fieldValue = (match[2] || match[4]).trim();
+                fields[fieldName] = fieldValue;
+            }
+
+            return fields;
+        }
+    }
+
+    // Load and display publications
+    function loadPublications() {
+        fetch('publication.bib')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Failed to load publication.bib');
+                }
+                return response.text();
+            })
+            .then(bibtexContent => {
+                const parser = new BibtexParser();
+                const publications = parser.parse(bibtexContent);
+                displayPublications(publications);
+            })
+            .catch(error => {
+                console.error('Error loading publications:', error);
+                document.getElementById('publications-list').innerHTML = `
+                    <div class="text-center text-red-500 py-4">
+                        <i class="fas fa-exclamation-circle text-2xl"></i>
+                        <p class="mt-2">Failed to load publications. Please make sure publication.bib is in the same directory.</p>
+                    </div>
+                `;
+            });
+    }
+
+    function displayPublications(publications) {
+        const container = document.getElementById('publications-list');
+
+        if (!publications || publications.length === 0) {
+            container.innerHTML = '<p class="text-gray-600">No publications found.</p>';
+            return;
+        }
+
+        // Sort by year (newest first)
+        publications.sort((a, b) => {
+            const yearA = parseInt(a.year) || 0;
+            const yearB = parseInt(b.year) || 0;
+            return yearB - yearA;
+        });
+
+        container.innerHTML = publications.map(pub => createPublicationHTML(pub)).join('<hr class="my-4">');
+    }
+
+    function createPublicationHTML(pub) {
+        const title = pub.title || 'Untitled';
+        const authors = pub.author || 'Unknown Authors';
+        const year = pub.year || 'N/A';
+        const venue = pub.journal || pub.booktitle || pub.publisher || '';
+
+        // Generate arXiv link if available
+        let venueHTML = venue;
+        if (venue.includes('arXiv:')) {
+            const arxivMatch = venue.match(/arXiv:(\d+\.\d+)/);
+            if (arxivMatch) {
+                const arxivId = arxivMatch[1];
+                venueHTML = `<a href="https://arxiv.org/pdf/${arxivId}" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">${escapeHtml(venue)}</a>`;
+            }
+        }
+
+        // Create additional links
+        let linksHTML = '';
+        if (pub.url) {
+            linksHTML += `<a href="${escapeHtml(pub.url)}" class="text-blue-600 hover:underline mr-4" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Paper</a>`;
+        }
+        if (pub.doi) {
+            linksHTML += `<a href="https://doi.org/${escapeHtml(pub.doi)}" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer"><i class="fas fa-book"></i> DOI</a>`;
+        }
+
+        return `
+            <div>
+                <h3 class="font-semibold text-lg">${escapeHtml(title)}</h3>
+                <p class="text-sm text-gray-600 mt-1">${venueHTML} ${year ? `(${escapeHtml(year)})` : ''}</p>
+                <p class="text-sm text-gray-700 mt-1">${escapeHtml(authors)}</p>
+                ${linksHTML ? `<div class="mt-2 text-sm">${linksHTML}</div>` : ''}
+            </div>
+        `;
+    }
+
+    function escapeHtml(text) {
+        const div = document.createElement('div');
+        div.textContent = text;
+        return div.innerHTML;
+    }
+
+    // Load publications when page loads
+    window.addEventListener('DOMContentLoaded', loadPublications);
 
 </script>
 </body>
